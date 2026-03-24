@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harshita Rana | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8X8tY74ymnX6S7W5W2Jx6x5l9g2C6xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+    <div class="bg-blob blob-1" aria-hidden="true"></div>
+    <div class="bg-blob blob-2" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home">&lt;HR/&gt;</a>
+        <nav class="nav" id="nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certificates</a>
+          <a href="#achievements">Activities</a>
+          <a href="#education">Education</a>
+          <a href="#contact" class="contact-pill">Contact</a>
+        </nav>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+          <span class="theme-label" id="themeLabel">Dark</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <div class="hero-center reveal">
+          <div class="profile-ring">
+            <div class="profile-inner">
+              <img
+                class="profile-photo"
+                src="pp.jpg"
+                alt="Harshita Rana profile photo"
+                onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='pp.jpg.jpeg';}else{this.style.display='none';this.parentElement.querySelector('.photo-fallback').style.display='grid';}"
+              />
+              <div class="photo-fallback">HR</div>
+            </div>
+          </div>
+          <p class="small-title">HELLO, I'M</p>
+          <h1>Harshita <span>Rana</span></h1>
+          <p class="hero-role">Computer Science Student and Data Enthusiast</p>
+          <p class="hero-desc">
+            I build clean and useful projects with Python, C++, and data tools.
+            I enjoy turning real-world problems into practical, insight-driven solutions.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn primary" href="#projects">View My Work</a>
+            <a
+              class="btn ghost"
+              href="Harshita cv.pdf"
+              download="Harshita CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
+            </a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/HarshitaR2" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/harshita-rana-b1059a2a2/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:harshita2006@gmail.com">Email</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section container reveal">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a Computer Science Engineering student at Lovely Professional University,
+              and I love building things that feel both smart and useful. From telecom
+              dashboards to exploratory data stories, I enjoy converting raw data and complex
+              logic into clear, impactful digital solutions.
+            </p>
+            <p>
+              My focus is simple: write clean code, think deeply, and create projects that
+              solve real problems. Every project helps me improve as a developer, analyst,
+              and teammate.
+            </p>
+            <div class="about-socials">
+              <a href="https://github.com/HarshitaR2" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/harshita-rana-b1059a2a2/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <div class="about-stats">
+            <article class="stat-card">
+              <h3 data-target="2">0</h3>
+              <p>Major Projects</p>
+            </article>
+            <article class="stat-card">
+              <h3 data-target="6">0</h3>
+              <p>Certifications</p>
+            </article>
+            <article class="stat-card">
+              <h3 data-target="82">0</h3>
+              <p>LeetCode Problems Solved</p>
+            </article>
+            <article class="stat-card">
+              <h3 data-target="10">0</h3>
+              <p>Real-Life Projects Built</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section container reveal">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <article class="skill-box">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span>
+            </div>
+          </article>
+          <article class="skill-box">
+            <h3>Frameworks</h3>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>Node.js</span>
+            </div>
+          </article>
+          <article class="skill-box">
+            <h3>Tools & Platforms</h3>
+            <div class="tags">
+              <span>Jupyter Notebook</span><span>Power BI</span><span>Git</span>
+            </div>
+          </article>
+          <article class="skill-box">
+            <h3>Soft Skills</h3>
+            <div class="tags">
+              <span>Problem Solving</span><span>Time Management</span><span>Adaptability</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section container reveal">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card tilt">
+            <h3>Airtel Network Performance Analysis Dashboard</h3>
+            <p class="project-sub">Power BI and Data Visualization | May 2025</p>
+            <ul>
+              <li>Analyzed telecom performance using nearly 19K records.</li>
+              <li>Tracked call drop ratio, voice quality, and customer satisfaction.</li>
+              <li>Built interactive filters and geospatial visuals for insights.</li>
+            </ul>
+            <a class="project-link" href="https://github.com/HarshitaR2/Airtel-Performance-Analysis-Dashboard" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+          <article class="project-card tilt">
+            <h3>Public Libraries: Exploratory Data Analysis</h3>
+            <p class="project-sub">Python, Pandas, NumPy, Matplotlib | Jan 2026</p>
+            <ul>
+              <li>Studied U.S. public library patterns across usage and finance.</li>
+              <li>Created heatmaps and trend visualizations for deeper analysis.</li>
+              <li>Extracted meaningful patterns from population and service data.</li>
+            </ul>
+            <a class="project-link" href="https://github.com/HarshitaR2/Public-Library-Services" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+          <article class="project-card tilt">
+            <h3>Blood Bank Locator and Dispatcher</h3>
+            <p class="project-sub">DSA Summer Training Project</p>
+            <ul>
+              <li>
+                Built a Blood Bank Locator and Dispatcher system using optimized DSA
+                concepts such as Graphs, Priority Queues, and Hash Maps for fast
+                donor-hospital matching and route optimization.
+              </li>
+              <li>
+                Applied advanced algorithms for real-time blood availability checks
+                and efficient dispatching.
+              </li>
+            </ul>
+            <div class="project-tech">
+              <span>C++</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>DSA</span>
+            </div>
+            <div class="project-actions">
+              <a class="project-link" href="https://github.com/HarshitaR2/Blood-locator" target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+              <a class="project-link" href="https://blood-locator.onrender.com/" target="_blank" rel="noreferrer">
+                Live Demo
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section container reveal">
+        <h2>Certificates</h2>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <h3>Computational Theory</h3>
+            <p>Infosys | Aug 2025</p>
+            <a class="cert-link" href="https://drive.google.com/file/d/1Uer8vwIgKVqaMkCT7K2q3WSmCLPEz7th/view" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+          <article class="cert-card">
+            <h3>ChatGPT-4 Prompt Engineering - Generative AI and LLM</h3>
+            <p>Infosys | Aug 2025</p>
+            <a class="cert-link" href="https://infyspringboard.onwingspan.com/web/en/login?ref=%2Fapp%2Ftoc%2Flex_auth_014157693153288192147%2Foverview" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+          <article class="cert-card">
+            <h3>Social Network</h3>
+            <p>NPTEL | Apr 2025</p>
+            <a class="cert-link" href="https://drive.google.com/file/d/1RLQThJ2ry0I_KsWlGiXgYk5S5iSVfb9U/view" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+          <article class="cert-card">
+            <h3>Crash Course on Python</h3>
+            <p>Coursera | Jul 2024</p>
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/XKG9RNBDFKUR?utm_source=wa&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+          <article class="cert-card">
+            <h3>Data Structure and Algorithm Using C++</h3>
+            <p>Lovely Professional University | July 2025</p>
+            <a class="cert-link" href="https://harshita-codes-world.lovable.app/certificates/dsa-training.png" target="_blank" rel="noreferrer">View Certificate</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="achievements" class="section container reveal">
+        <h2>Activities</h2>
+        <article class="long-card">
+          <ul>
+            <li>
+              <strong>Event Manager, Cyber Security Club:</strong>
+              Organized and managed cybersecurity events, coordinating teams and
+              ensuring smooth execution.
+            </li>
+            <li>
+              <strong>DSA Practice (LeetCode):</strong>
+              Regularly solved data structure and algorithm problems, strengthening
+              problem-solving and coding efficiency.
+            </li>
+            <li>
+              <strong>Technical Event Participation:</strong>
+              Participated in coding contests and technical challenges, applying
+              problem-solving skills under time constraints.
+            </li>
+            <li>
+              <strong>Self-Driven Learning:</strong>
+              Actively explored new technologies and tools beyond coursework,
+              demonstrating initiative and continuous learning.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education" class="section container reveal">
+        <h2>Education</h2>
+        <div class="edu-line">
+          <article>
+            <h3>Lovely Professional University</h3>
+            <p>B.Tech CSE</p>
+            <span>Since Aug 2025</span>
+          </article>
+          <article>
+            <h3>Bharti Vidya Peeth School</h3>
+            <p>Intermediate: 82%</p>
+            <span>Apr 2021 - Mar 2022</span>
+          </article>
+          <article>
+            <h3>Bharti Vidya Peeth School</h3>
+            <p>Matriculation: 80%</p>
+            <span>Apr 2019 - Mar 2020</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container reveal">
+        <h2>Get In Touch</h2>
+        <p class="contact-text">
+          I am open to internships, collaborations, and project opportunities.
+        </p>
+        <div class="contact-grid">
+          <article><h3>Email</h3><p>harshita2006@gmail.com</p></article>
+          <article><h3>LinkedIn</h3><p>linkedin.com/in/harshita-rana-b1059a2a2</p></article>
+          <article><h3>GitHub</h3><p>github.com/HarshitaR2</p></article>
+        </div>
+        <a class="btn primary big-btn" href="mailto:harshita2006@gmail.com">Say Hello</a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
