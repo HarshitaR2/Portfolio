@@ -25,13 +25,24 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
 const animateCount = (el) => {
-  const target = Number(el.dataset.target || 0);
+  const configuredTarget = el.dataset.target;
+  const sourceText = el.textContent.trim();
+  const suffix = el.dataset.suffix || (sourceText.match(/\D+$/) || [""])[0];
+  const target = Number(configuredTarget ?? sourceText.replace(/[^\d.]/g, ""));
   const start = performance.now();
   const duration = 1100;
 
   const update = (time) => {
     const progress = Math.min((time - start) / duration, 1);
-    el.textContent = Math.floor(target * (1 - (1 - progress) ** 3));
+    if (Number.isNaN(target) || target === 0) {
+      el.textContent = `0${suffix}`;
+    } else {
+      const current = target * (1 - (1 - progress) ** 3);
+      const formatted = Number.isInteger(target)
+        ? Math.floor(current)
+        : current.toFixed(2);
+      el.textContent = `${formatted}${suffix}`;
+    }
     if (progress < 1) requestAnimationFrame(update);
   };
 
