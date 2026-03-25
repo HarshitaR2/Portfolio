@@ -344,6 +344,7 @@ body.dark .about-text p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  justify-content: center;
 }
 
 .about-socials a {
